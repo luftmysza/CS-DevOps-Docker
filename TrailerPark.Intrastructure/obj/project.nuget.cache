@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "rmvqljZmvCg=",
+  "success": true,
+  "projectFilePath": "D:\\Users\\dzmitry.zaitsau\\source\\repos\\TrailerPark\\TrailerPark.Intrastructure\\TrailerPark.Intrastructure.csproj",
+  "expectedPackageFiles": [
+    "D:\\Users\\dzmitry.zaitsau\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.0\\microsoft.extensions.configuration.10.0.0.nupkg.sha512",
+    "D:\\Users\\dzmitry.zaitsau\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.0\\microsoft.extensions.configuration.abstractions.10.0.0.nupkg.sha512",
+    "D:\\Users\\dzmitry.zaitsau\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.0\\microsoft.extensions.primitives.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

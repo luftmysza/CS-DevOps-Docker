@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace TrailerPark.Core.Models;
 
-public class OmdbMovie
+public class Movie
 {
     public string? imdbID { get; set; }
     public string? Title { get; set; }

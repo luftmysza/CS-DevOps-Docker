@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrailerPark.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fcba9ec7bdee7f532e39afdaa74dba53a7982f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56ca93c8633e2c51a9c3621c8cfedf13ce4ecf03")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrailerPark.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrailerPark.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

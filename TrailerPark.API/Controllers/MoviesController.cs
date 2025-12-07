@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+
 using TrailerPark.Core.Interfaces;
 using TrailerPark.Intrastructure.Omdb;
 

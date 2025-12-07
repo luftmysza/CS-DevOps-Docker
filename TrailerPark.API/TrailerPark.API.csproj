@@ -7,9 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.18" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.18" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\TrailerPark.Domain\TrailerPark.Core.csproj" />
     <ProjectReference Include="..\TrailerPark.Intrastructure\TrailerPark.Intrastructure.csproj" />

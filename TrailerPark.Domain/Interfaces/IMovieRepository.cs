@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrailerPark.Core.Interfaces
+namespace TrailerPark.Core.Interfaces;
+
+public interface IMovieRepository
 {
-    public interface IMovieRepository
-    {
-    }
 }

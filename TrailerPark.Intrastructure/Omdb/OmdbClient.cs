@@ -4,24 +4,49 @@ using Microsoft.Extensions.Configuration;
 using TrailerPark.Core.Models;
 using TrailerPark.Core.Interfaces;
 
-namespace TrailerPark.Intrastructure.Omdb
+namespace TrailerPark.Intrastructure.Omdb;
+
+public class OmdbClient : IExternalMovieProvider
 {
-    public class OmdbClient
+    private readonly HttpClient _http;
+    private readonly string _apiKey;
+
+    public OmdbClient(HttpClient httpClient, IConfiguration configuration)
     {
-        private readonly HttpClient _http;
-        private readonly string _apiKey;
+        _http = httpClient;
+        _apiKey = configuration["Omdb:ApiKey"];
+    }
 
-        public OmdbClient(HttpClient httpClient, IConfiguration configuration)
-        {
-            _http = httpClient;
-            _apiKey = configuration["Omdb:ApiKey"];
-        }
+    public async Task<OmdbMovie?> FetchByIdAsync(string id)
+    {
+        //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
 
-        public async Task<OmdbMovie?> FetchFromOmdbAsync(string id)
-        {
-            var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
+        var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
 
-            return await _http.GetFromJsonAsync<OmdbMovie>(url);
-        }
+        return await _http.GetFromJsonAsync<OmdbMovie>(url);
+    }
+    public async Task<OmdbMovie?> FetchByTitleAsync(string title)
+    {
+        //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
+
+        var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
+
+        return await _http.GetFromJsonAsync<OmdbMovie>(url);
+    }
+    public async Task<OmdbMovie?> FetchByTypeAsync(string type)
+    {
+        //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
+
+        var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
+
+        return await _http.GetFromJsonAsync<OmdbMovie>(url);
+    }
+    public async Task<OmdbMovie?> FetchBySearchAsync(string type)
+    {
+        //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
+
+        var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
+
+        return await _http.GetFromJsonAsync<OmdbMovie>(url);
     }
 }

@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrailerPark.Core.Services
+namespace TrailerPark.Core.Services;
+
+public class MovieService
 {
-    internal class MovieService
-    {
-    }
 }

@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddHttpClient<OmdbClient>(client =>
+builder.Services.AddHttpClient<IExternalMovieProvider, OmdbClient>(client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["Omdb:BaseUrl"]);
 });
@@ -32,9 +32,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGet("/movies/{title}", async (MovieService service, string title) =>
+app.MapGet("test/{title}", async (IExternalMovieProvider omdbClient, string title) =>
 {
-    var movie = await service.GetOrFetchMovieAsync(title);
+    var movie = await omdbClient.FetchBySearchAsync(title);
     return movie is null ? Results.NotFound() : Results.Ok(movie);
 });
 

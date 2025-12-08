@@ -1,25 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using TrailerPark.Core.Models;
+using TrailerPark.Core.Services;
 using TrailerPark.Core.Interfaces;
-using TrailerPark.Intrastructure.Omdb;
+
 
 namespace TrailerPark.API.Controllers;
 
+[ApiController]
 [Route("/")]
 public class MoviesController : ControllerBase
 {
-    public IExternalMovieProvider _omdbClient;
+    private readonly MovieService _service;
 
-    public MoviesController(IExternalMovieProvider omdbClient)
+    public MoviesController(MovieService service)
     {
-        _omdbClient = omdbClient;
+         _service = service;
     }
 
+    [HttpGet]
+    public async Task<IActionResult> Index([FromQuery] MovieQuery movieQuery)
+    {   
+        if (movieQuery is null) 
+            return BadRequest("Provided parameters do not meet API requirements");
 
-    [HttpGet("{query}")]
-    public async Task<IActionResult> Index([FromRoute] string query)
-    {
-        var result = await _omdbClient.FetchByIdAsync(query);
-        return Ok();
+        Movie? result = await _service.Inbound(movieQuery);
+
+        if (result is null)
+            return NotFound("Provided parameters did not return any result");
+        else
+            return Ok(result);
     }
 }

@@ -8,5 +8,5 @@ namespace TrailerPark.Core.Models;
 
 public class Person
 {
-
+    public string Name { get; set; } = "";
 }

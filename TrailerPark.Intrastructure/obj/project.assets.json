@@ -674,40 +674,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\drboo\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/luftmysza/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\drboo\\Repos\\TrailerPark\\TrailerPark.Intrastructure\\TrailerPark.Intrastructure.csproj",
+      "projectUniqueName": "/home/luftmysza/Repos/TrailerPark/TrailerPark.Intrastructure/TrailerPark.Intrastructure.csproj",
       "projectName": "TrailerPark.Intrastructure",
-      "projectPath": "C:\\Users\\drboo\\Repos\\TrailerPark\\TrailerPark.Intrastructure\\TrailerPark.Intrastructure.csproj",
-      "packagesPath": "C:\\Users\\drboo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\drboo\\Repos\\TrailerPark\\TrailerPark.Intrastructure\\obj\\",
+      "projectPath": "/home/luftmysza/Repos/TrailerPark/TrailerPark.Intrastructure/TrailerPark.Intrastructure.csproj",
+      "packagesPath": "/home/luftmysza/.nuget/packages/",
+      "outputPath": "/home/luftmysza/Repos/TrailerPark/TrailerPark.Intrastructure/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\drboo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/luftmysza/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "/usr/lib64/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\drboo\\Repos\\TrailerPark\\TrailerPark.Domain\\TrailerPark.Core.csproj": {
-              "projectPath": "C:\\Users\\drboo\\Repos\\TrailerPark\\TrailerPark.Domain\\TrailerPark.Core.csproj"
+            "/home/luftmysza/Repos/TrailerPark/TrailerPark.Domain/TrailerPark.Core.csproj": {
+              "projectPath": "/home/luftmysza/Repos/TrailerPark/TrailerPark.Domain/TrailerPark.Core.csproj"
             }
           }
         }
@@ -722,7 +715,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -753,7 +746,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -16,39 +16,59 @@ public class OmdbClient : IExternalMovieProvider
     public OmdbClient(HttpClient httpClient, IConfiguration configuration)
     {
         _http = httpClient;
-        _apiKey = configuration["Omdb:ApiKey"];
+        _apiKey = configuration["Omdb:ApiKey"]!;
     }
-
-    public async Task<OmdbMovie?> FetchByIdAsync(string id)
+    public async Task<Movie?> FetchByIdAsync(MovieQuery movieQuery)
     {
         //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
 
         var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
 
-        return await _http.GetFromJsonAsync<OmdbMovie>(url);
+        OmdbMovie? movieFetched = await _http.GetFromJsonAsync<OmdbMovie>(url);
+        Movie? movieMapped = await Mapper(movieFetched);
+
+        throw new NotImplementedException();
+        return movieMapped;
     }
-    public async Task<OmdbMovie?> FetchByTitleAsync(string title)
+    public async Task<Movie?> FetchByTitleAsync(MovieQuery movieQuery)
     {
         //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
 
         var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
 
-        return await _http.GetFromJsonAsync<OmdbMovie>(url);
+        OmdbMovie? movieFetched = await _http.GetFromJsonAsync<OmdbMovie>(url);
+        Movie? movieMapped = await Mapper(movieFetched);
+
+        throw new NotImplementedException();
+        return movieMapped;
     }
-    public async Task<OmdbMovie?> FetchByTypeAsync(string type)
+    public async Task<Movie?> FetchByTypeAsync(MovieQuery movieQuery)
     {
         //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
 
         var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
 
-        return await _http.GetFromJsonAsync<OmdbMovie>(url);
+        OmdbMovie? movieFetched = await _http.GetFromJsonAsync<OmdbMovie>(url);
+        Movie? movieMapped = await Mapper(movieFetched);
+
+        throw new NotImplementedException();
+        return movieMapped;
     }
-    public async Task<OmdbMovie?> FetchBySearchAsync(string type)
+    public async Task<Movie?> FetchBySearchAsync(MovieQuery movieQuery)
     {
         //var url = $"?t={Uri.EscapeDataString(id)}&apikey={_apiKey}";
 
         var url = "https://www.omdbapi.com/?i=tt3896198&apikey=93ee7c7a";
 
-        return await _http.GetFromJsonAsync<OmdbMovie>(url);
+        OmdbMovie? movieFetched = await _http.GetFromJsonAsync<OmdbMovie>(url);
+        Movie? movieMapped = await Mapper(movieFetched);
+
+        throw new NotImplementedException();
+        return movieMapped;
+    }
+
+    private async Task<Movie?> Mapper(OmdbMovie? movieFetched)
+    {
+        throw new NotImplementedException();
     }
 }
